@@ -18,22 +18,35 @@
             }
             .counter-panel{
                 position: relative;
-                padding-top: 25%;
-                padding-left: 10%;
+                text-align: center;
+                line-height: 100px;
                 -webkit-font-smoothing: antialiased;
-                background-image:url( "https://img.freepik.com/premium-photo/abstract-colorful-wave-transparent-stylish-background_1115474-32457.jpg?w=740");
+            /*    background-image:url( "https://images.idgesg.net/images/article/2017/06/dan-surface-laptop-primary-100727770-orig.jpg");*/
+            background-color: silver;
+
+
+                background-size: 300px 200px;
                 background-position-y:center;
-                opacity: 0.6;
+               font-family: "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+                height: 100%;
+                color:#fff;
+                z-index: -1;
             }
-            
+            .cd-overlay .title{
+                position: relative;
+                top:120px;
+                z-index:100;text-align: center;
+            }
         </Style>
     </head>
     <body>
         <div class="cd-overlay">
+                <div class="title">LTI - Days to Injury</div>
         <div id="counterdown" class="counter-panel"></div>
+       
     </div>
         <script type="text/javascript">
-            var finalDate = new Date("12/18/2024");
+            var finalDate = new Date("12/8/2024");
          
             $('#counterdown').countdown(finalDate, function(event) {
             var totalHours = event.offset.totalDays * 24 + event.offset.hours;
